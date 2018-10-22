@@ -58,20 +58,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let absoluteString = url.absoluteString
             print(absoluteString)
             
-            //["citimolife:", "", "test.uat2.com", "index.htm?s=lpa&p=123"]
-            //let queryArray = absoluteString.components(separatedBy: "/")
-            //print(queryArray)//queryArray[2] + [3] will be the URL
-            
             let urlString = absoluteString.replacingOccurrences(of: "citimolife:", with: "https:")
             
-            //Optional("s=lpa&p=123")
-            let params = url.query
-            print(params as Any)
-            
-            let vc = UIViewController()
-            let webview = WKWebView(frame: CGRect(x:0, y:0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT))
-            webview.load(NSURLRequest(url: NSURL(string:urlString)! as URL) as URLRequest)
-            vc.view.addSubview(webview)
+            let vc = PreLoginViewController()
+            vc.url = urlString
             self.window?.rootViewController = vc
             
         }

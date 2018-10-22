@@ -30,6 +30,7 @@
 		2AC1FC0D216268E40082C421 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1FC0C216268E40082C421 /* Util.swift */; };
 		2AC1FC1721650AC80082C421 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1FC1621650AC80082C421 /* MenuItemModel.swift */; };
 		2AC1FC1A21650B6A0082C421 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1FC1921650B6A0082C421 /* MenuItemCell.swift */; };
+		2AC39206217786850070598F /* PreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC39205217786850070598F /* PreLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		2AC1FC0C216268E40082C421 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		2AC1FC1621650AC80082C421 /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
 		2AC1FC1921650B6A0082C421 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		2AC39205217786850070598F /* PreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginViewController.swift; sourceTree = "<group>"; };
 		E5208CE4E845DD67CE80BF99 /* Pods-CitiMoLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitiMoLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-CitiMoLife/Pods-CitiMoLife.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 				2AC1FBE02162679A0082C421 /* Assets.xcassets */,
 				2AC1FBE22162679A0082C421 /* LaunchScreen.storyboard */,
 				2AC1FBE52162679A0082C421 /* Info.plist */,
+				2AC39205217786850070598F /* PreLoginViewController.swift */,
 			);
 			path = CitiMoLife;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				2A5A889E216BA63700F6E14F /* FoodModel.swift in Sources */,
 				2A5A88B02171EB9600F6E14F /* Color.swift in Sources */,
 				2ABA357921735A5700E0CFF0 /* FlightSearchView.swift in Sources */,
+				2AC39206217786850070598F /* PreLoginViewController.swift in Sources */,
 				2AC1FC0B216268980082C421 /* CommonDefine.swift in Sources */,
 				2ABA3577217347AB00E0CFF0 /* NetworkUtil.swift in Sources */,
 				2A5A88A0216BA78C00F6E14F /* FoodCell.swift in Sources */,
@@ -673,7 +677,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 596J96K4CS;
 				INFOPLIST_FILE = CitiMoLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,7 +697,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 596J96K4CS;
 				INFOPLIST_FILE = CitiMoLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
