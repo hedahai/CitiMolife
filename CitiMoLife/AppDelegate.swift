@@ -60,8 +60,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let urlString = absoluteString.replacingOccurrences(of: "citimolife:", with: "https:")
             
-            let vc = PreLoginViewController()
+            //let vc = PreLoginViewController()
+            let vc = LoginViewController()
             vc.url = urlString
+            vc.window = self.window
             self.window?.rootViewController = vc
             
         }

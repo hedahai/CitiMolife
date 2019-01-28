@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		124C8F756FF578DD79938404 /* Pods_CitiMoLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 264243853DE4E5E200B6A1B7 /* Pods_CitiMoLife.framework */; };
 		2A0BDDB821731CF400655CEF /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0BDDB721731CF400655CEF /* CityModel.swift */; };
+		2A3D9DED21FF3B5A00AF58C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D9DEC21FF3B5A00AF58C0 /* LoginViewController.swift */; };
 		2A5A889E216BA63700F6E14F /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5A889D216BA63700F6E14F /* FoodModel.swift */; };
 		2A5A88A0216BA78C00F6E14F /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5A889F216BA78C00F6E14F /* FoodCell.swift */; };
 		2A5A88A42171D1EA00F6E14F /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5A88A32171D1EA00F6E14F /* FlightViewController.swift */; };
@@ -54,6 +55,7 @@
 		06AFBD525349A362061D515E /* Pods-CitiMoLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitiMoLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CitiMoLife/Pods-CitiMoLife.debug.xcconfig"; sourceTree = "<group>"; };
 		264243853DE4E5E200B6A1B7 /* Pods_CitiMoLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CitiMoLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0BDDB721731CF400655CEF /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		2A3D9DEC21FF3B5A00AF58C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2A5A889D216BA63700F6E14F /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		2A5A889F216BA78C00F6E14F /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		2A5A88A32171D1EA00F6E14F /* FlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 				2A0BDDB721731CF400655CEF /* CityModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2A3D9DEB21FF3B1C00AF58C0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2A3D9DEC21FF3B5A00AF58C0 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		2A5A8899216BA26800F6E14F /* Food */ = {
@@ -215,6 +225,7 @@
 		2AC1FBD8216267970082C421 /* CitiMoLife */ = {
 			isa = PBXGroup;
 			children = (
+				2A3D9DEB21FF3B1C00AF58C0 /* Login */,
 				2A5A88AE2171EB8100F6E14F /* Extension */,
 				2A5A88A12171D18B00F6E14F /* Flight */,
 				2A5A8899216BA26800F6E14F /* Food */,
@@ -487,6 +498,7 @@
 				2AC1FBDA216267970082C421 /* AppDelegate.swift in Sources */,
 				2AC1FC1721650AC80082C421 /* MenuItemModel.swift in Sources */,
 				2A5A88A42171D1EA00F6E14F /* FlightViewController.swift in Sources */,
+				2A3D9DED21FF3B5A00AF58C0 /* LoginViewController.swift in Sources */,
 				2AC1FC1A21650B6A0082C421 /* MenuItemCell.swift in Sources */,
 				2A0BDDB821731CF400655CEF /* CityModel.swift in Sources */,
 				2A5A88A72171D4C100F6E14F /* HotCityCell.swift in Sources */,
