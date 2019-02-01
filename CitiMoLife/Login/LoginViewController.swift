@@ -43,7 +43,7 @@ class LoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
         print("Start create WebView")
         
         self.view.backgroundColor = UIColor.white
-        webview.navigationDelegate = self
+        webview.navigationDelegate = self;
         webview.uiDelegate = self;
         var request = NSURLRequest(url: NSURL(string:url!)! as URL) as URLRequest
         request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
@@ -55,9 +55,11 @@ class LoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
         progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 5))
         progressView.trackTintColor = UIColor.white
         progressView.progressTintColor = UIColor.orange
-        self.navigationController?.navigationBar.addSubview(progressView)
-        
+        //self.navigationController?.navigationBar.addSubview(progressView)
+       
         self.view.addSubview(webview)
+        self.view.addSubview(progressView)
+        self.view.bringSubviewToFront(self.progressView)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
