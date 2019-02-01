@@ -31,6 +31,7 @@
 		2AC1FC1721650AC80082C421 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1FC1621650AC80082C421 /* MenuItemModel.swift */; };
 		2AC1FC1A21650B6A0082C421 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1FC1921650B6A0082C421 /* MenuItemCell.swift */; };
 		2AC39206217786850070598F /* PreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC39205217786850070598F /* PreLoginViewController.swift */; };
+		F9B4FAA72202C8B000F24B12 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4FAA62202C8B000F24B12 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		2AC1FC1921650B6A0082C421 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		2AC39205217786850070598F /* PreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginViewController.swift; sourceTree = "<group>"; };
 		E5208CE4E845DD67CE80BF99 /* Pods-CitiMoLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitiMoLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-CitiMoLife/Pods-CitiMoLife.release.xcconfig"; sourceTree = "<group>"; };
+		F9B4FAA62202C8B000F24B12 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 		2AC1FBD8216267970082C421 /* CitiMoLife */ = {
 			isa = PBXGroup;
 			children = (
+				F9B4FAA52202C81600F24B12 /* dashboard */,
 				2A5A88AE2171EB8100F6E14F /* Extension */,
 				2A5A88A12171D18B00F6E14F /* Flight */,
 				2A5A8899216BA26800F6E14F /* Food */,
@@ -299,6 +302,14 @@
 				E5208CE4E845DD67CE80BF99 /* Pods-CitiMoLife.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9B4FAA52202C81600F24B12 /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				F9B4FAA62202C8B000F24B12 /* DashboardViewController.swift */,
+			);
+			path = dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B4FAA72202C8B000F24B12 /* DashboardViewController.swift in Sources */,
 				2AC1FBDC216267980082C421 /* MainViewController.swift in Sources */,
 				2AC1FBDA216267970082C421 /* AppDelegate.swift in Sources */,
 				2AC1FC1721650AC80082C421 /* MenuItemModel.swift in Sources */,
