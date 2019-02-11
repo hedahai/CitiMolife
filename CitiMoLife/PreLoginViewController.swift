@@ -17,6 +17,10 @@ class PreLoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate
     
     let loadingImage = UIImageView(frame: CGRect(x:0, y:5, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-5))
     
+    let loadingUIBackground = UIView(frame: CGRect(x:0, y:5, width:SCREEN_WIDTH, height:SCREEN_HEIGHT))
+    let activityInd = UIActivityIndicatorView(frame: CGRect(x:0, y:5, width:32.0, height:32.0))
+    
+    
     var url:String?
 
     override func viewDidLoad() {
@@ -39,7 +43,7 @@ class PreLoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate
         self.view.addSubview(webview)
         self.view.addSubview(loadingImage)
        
-
+        
         
     }
     
@@ -74,6 +78,19 @@ class PreLoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         print("开始获取网页内容")
+        
+        loadingUIBackground.tag = 103
+        loadingUIBackground.backgroundColor = UIColor.black
+        loadingUIBackground.alpha = 0.8
+        
+        activityInd.center = self.view.center
+        activityInd.style = UIActivityIndicatorView.Style.white
+        loadingUIBackground.addSubview(activityInd)
+        
+        
+        self.view.addSubview(loadingUIBackground)
+        
+        activityInd.startAnimating()
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {

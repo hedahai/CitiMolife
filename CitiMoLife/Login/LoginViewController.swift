@@ -14,9 +14,12 @@ class LoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
     
     let loginImage = UIImageView(frame: CGRect(x:0, y:0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT))
     
-    let webview = WKWebView(frame: CGRect(x:0, y:5, width:SCREEN_WIDTH, height:SCREEN_HEIGHT-5))
+    let webview = WKWebView(frame: CGRect(x:0, y:0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT))
     
     var progressView = UIProgressView()
+    
+    let loadingUIBackground = UIView(frame: CGRect(x:0, y:0, width:SCREEN_WIDTH, height:SCREEN_HEIGHT))
+    let activityInd = UIActivityIndicatorView(frame: CGRect(x:0, y:0, width:50.0, height:50.0))
     
     var url:String?
     var window: UIWindow?
@@ -58,8 +61,8 @@ class LoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
         //self.navigationController?.navigationBar.addSubview(progressView)
        
         self.view.addSubview(webview)
-        self.view.addSubview(progressView)
-        self.view.bringSubviewToFront(self.progressView)
+        //self.view.addSubview(progressView)
+        //self.view.bringSubviewToFront(self.progressView)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -75,13 +78,14 @@ class LoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
                 })
                 let subViews = self.view.subviews
                 for subview in subViews{
-                    if (subview.tag == 1002) {
+                    if (subview.tag == 1002 || subview.tag == 1003) {
                         print("for removing...")
                         subview.removeFromSuperview()
                     } else {
                         print("not removing..")
                     }
                 }
+                activityInd.stopAnimating()
             }
             print(webview.estimatedProgress)
         }
@@ -89,10 +93,25 @@ class LoginViewController: UIViewController,WKNavigationDelegate,WKUIDelegate {
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         print("Start Loading")
+        
+        loadingUIBackground.tag = 1003
+        loadingUIBackground.backgroundColor = UIColor.black
+        loadingUIBackground.alpha = 0.8
+        
+        activityInd.center = self.view.center
+        activityInd.style = UIActivityIndicatorView.Style.white
+        loadingUIBackground.addSubview(activityInd)
+        
+        
+        self.view.addSubview(loadingUIBackground)
+        
+        activityInd.startAnimating()
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         print("Start Fetch Web Page")
+        
+        
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {

@@ -17,10 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let viewContorller = MainViewController()
-        let navigationController = UINavigationController(rootViewController:viewContorller)
-        navigationController.navigationBar.barTintColor = CITI_BLUE
-        self.window?.rootViewController = navigationController
+        //let viewContorller = MainViewController()
+        //let navigationController = UINavigationController(rootViewController:viewContorller)
+        //navigationController.navigationBar.barTintColor = CITI_BLUE
+        //self.window?.rootViewController = navigationController
+        
+        let viewContorller = DashboardViewController()
+        self.window?.rootViewController = viewContorller
         self.window?.backgroundColor = UIColor.white
         self.window?.makeKeyAndVisible()
         return true
